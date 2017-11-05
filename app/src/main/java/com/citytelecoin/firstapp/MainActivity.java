@@ -8,6 +8,8 @@ import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
@@ -15,9 +17,9 @@ public class MainActivity extends AppCompatActivity {
     //Made Button in activity_main.xml. Here I am calling
     //Button in for use and making named place holders for the
     //ones I created.  Here I called them button1, button2, and button3 respectfully.
-    Button button1, button2,button3;
-
-
+    Button button1, button2,button3,button4;
+    TextView textView;
+    EditText editText;
 
 
     @Override
@@ -70,6 +72,25 @@ public class MainActivity extends AppCompatActivity {
                                    }
                                    }
         );
+
+        //This Code allows me to type into the plain text box on this activity screen
+        //and then pass that string data to the text view by use of a button, (button5).
+
+        final TextView textView = (TextView) findViewById(R.id.textView);
+        final EditText editText = (EditText) findViewById(R.id.editText);
+        Button button4 = (Button) findViewById(R.id.button4);
+
+        button4.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                String editString = editText.getText().toString();
+                textView.setText(editString);
+
+            }
+        });
+
+
+
 
 
     }
