@@ -14,7 +14,7 @@ public class MainActivity extends AppCompatActivity {
 
     //Made Button in activity_main.xml. Here I am calling
     //Button in for use and making named place holders for the
-    //ones I created.  Here I called them button1 and button2.
+    //ones I created.  Here I called them button1, button2, and button3 respectfully.
     Button button1, button2,button3;
 
 
@@ -65,7 +65,7 @@ public class MainActivity extends AppCompatActivity {
 
                     //Here an INTENT is created.  Here is is called myIntent, but can be whatever is wanted.
                                    {Intent myIntent = new Intent(MainActivity.this, SecondActivity.class);
-                                   // Here the intent I created is being asked to start.  
+                                   // Here the intent I created is being asked to start.
                                    startActivity(myIntent);
                                    }
                                    }
