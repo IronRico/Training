@@ -21,6 +21,10 @@ public class SecondActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_second);
+        myNewMethod();
+
+
+
 
 
      //Here the toggle button is coded for use with a very simple if/else statement
@@ -56,6 +60,11 @@ public class SecondActivity extends AppCompatActivity {
             startActivity(myIntent2);
         }
     }
+
+
+
+
+
         );
 
 
@@ -63,7 +72,21 @@ public class SecondActivity extends AppCompatActivity {
 
 
 
-}}
+
+
+}
+    //The code below shows how to create a new method inside an activity
+    //Please pay attention to the placement of this new method.
+    //Note that the methods is OUTSIDE of the full @Override statement
+    //with the final closing bracket above this denoting that.
+    //Note that at the ON CREATE portion at the top of the code,
+    //This method is called.  So it will display a toast message if the
+    //user accesses this activity screen.
+    private void myNewMethod (){
+        Toast.makeText(this, "Second Screen Accessed!!!", Toast.LENGTH_SHORT).show();
+    }
+
+}
 
 
 
